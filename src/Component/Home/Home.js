@@ -4,14 +4,15 @@ import "./Home.css";
 import {ButtonContext} from "../../App";
 import {BsAirplane, BsAirplaneFill} from "react-icons/bs";
 import {TbCurrencyTaka} from "react-icons/tb";
+import FlightDetails from "../FlightDetails/FlightDetails";
 
 const Home = () => {
-  const {button1,  setButton1} =
-    useContext(ButtonContext);
+  const {button1, setButton1} = useContext(ButtonContext);
 
   return (
-    <div className="grid grid-cols-12 w-9/12 mx-auto gap-2">
-      <div className="col-span-9 h-72 bg-slate-100 mt-24 rounded-md">
+   <div>
+     <div className="grid grid-cols-12 w-9/12 mx-auto gap-2">
+      <div className="col-span-9 bg-slate-100 mt-24 mb-10 rounded-md">
         <div className="grid grid-cols-12">
           {/* grid cols number 1  */}
           <div className="col-span-3 ml-8">
@@ -24,58 +25,102 @@ const Home = () => {
               <span className="border"></span> E{" "}
             </h1>
           </div>
-          
+
           {/* grid cols number 2 */}
-          <div className="col-span-3 mt-8">
-            <h1 className="text-5xl">DAC</h1>
-            <p className="text-slate-500 font-medium mt-3">
-              Hazrat Shajalal Intl Airport
-            </p>
-            <p className="text-xl font-bold my-1 color">19:05</p>
-            <p className="text-slate-500 font-medium mt-3">SUN 4TH JUL 2022</p>
-            <div className="flex justify-between color font-bold mt-12">
-              <p>Refundable </p>
-              <p>Class-W</p>
+          {button1 ? (
+            <div className="col-span-3 mt-8">
+              <h1 className="text-5xl">DAC</h1>
+              <p className="text-slate-500 font-medium mt-3">
+                Hazrat Shajalal Intl Airport
+              </p>
+              <p className="text-xl font-bold my-1 color">19:05</p>
+              <p className="text-slate-500 font-medium mt-3">
+                SUN 4TH JUL 2022
+              </p>
+              <div className="flex justify-between color font-bold mt-12">
+                <p>Refundable </p>
+                <p>Class-W</p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="col-span-3 mt-8 ml-2 ">
+              <h1 className="text-5xl ">JFK</h1>
+              <p className="text-slate-500 font-medium mt-3">
+                JF Kennedy Intl Airport
+              </p>
+              <p className="text-xl font-bold my-1 color">12:05</p>
+              <p className="text-slate-500 font-medium mt-3">
+                MON 6TH JUL 2022
+              </p>
+              <p className="text-slate-500 font-medium mt-12">
+                Baggage : 45 KG
+              </p>
+            </div>
+          )}
 
           {/* Grid cols number 3  */}
           <div className="col-span-3 flex justify-center  items-center">
             {button1 ? (
-              <button 
-                className=" rotate-90"
-                type="button">
+              <button className=" rotate-90" type="button">
                 <BsAirplaneFill className="w-24 h-20" />
               </button>
             ) : (
-              <button onClick={()=>setButton1(true)} className=" rotate-90  mt-2" type="button ">
+              <button
+                onClick={() => setButton1(true)}
+                className=" rotate-90  mt-2"
+                type="button ">
                 <BsAirplane className="w-24 h-20" />
               </button>
             )}
 
             {!button1 ? (
-              <button 
-                className=" -rotate-90 mt-20 -ml-9"
-                type="button">
+              <button className=" -rotate-90 mt-20 -ml-9" type="button">
                 <BsAirplaneFill className="w-24 h-20 " />
               </button>
             ) : (
-              <button onClick={()=> setButton1(false)}  className=" -rotate-90 mt-20 -ml-8" type="button ">
+              <button
+                onClick={() => setButton1(false)}
+                className=" -rotate-90 mt-20 -ml-8"
+                type="button ">
                 <BsAirplane className="w-24 h-20" />
               </button>
             )}
           </div>
 
-              {/* Grid cols number 4 */}
-          <div className="col-span-3 mt-8 text-end mr-10 ">
-            <h1 className="text-5xl ">JFK</h1>
-            <p className="text-slate-500 font-medium mt-3">
-              JF Kennedy Intl Airport{" "}
-            </p>
-            <p className="text-xl font-bold my-1 color">12:05</p>
-            <p className="text-slate-500 font-medium mt-3">MON 6TH JUL 2022</p>
-            <p className="text-slate-500 font-medium mt-12">Baggage : 45 KG</p>
-          </div>
+          {/* Grid cols number 4 */}
+          {button1 ? (
+            <div className="col-span-3 mt-8 text-end mr-10 ">
+              <h1 className="text-5xl ">JFK</h1>
+              <p className="text-slate-500 font-medium mt-3">
+                JF Kennedy Intl Airport{" "}
+              </p>
+              <p className="text-xl font-bold my-1 color">12:05</p>
+              <p className="text-slate-500 font-medium mt-3">
+                MON 6TH JUL 2022
+              </p>
+              <p className="text-slate-500 font-medium mt-12">
+                Baggage : 45 KG
+              </p>
+            </div>
+          ) : (
+            <div className="col-span-3 mt-8 text-end mr-8">
+              <h1 className="text-5xl">DAC</h1>
+              <p className="text-slate-500 font-medium mt-3">
+                Hazrat Shajalal Intl Airport
+              </p>
+              <p className="text-xl font-bold my-1 color">19:05</p>
+              <p className="text-slate-500 font-medium mt-3">
+                SUN 4TH JUL 2022
+              </p>
+              <div className="flex justify-around color font-bold mt-12">
+                <p>Refundable </p>
+                <p>Class-W</p>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="">
+        <FlightDetails/>
         </div>
       </div>
 
@@ -90,12 +135,12 @@ const Home = () => {
           </button>
         </div>
         <div className="flex justify-end mr-10 mt-10">
-          <button className=" text-slate-600 font-bold ">
-            Flight Details 
-          </button>
+          <button className=" text-slate-600 font-bold ">Flight Details</button>
         </div>
       </div>
     </div>
+  
+   </div>
   );
 };
 
