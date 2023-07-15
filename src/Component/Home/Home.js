@@ -13,7 +13,7 @@ const Home = () => {
    <div>
      <div className="grid grid-cols-12 w-9/12 mx-auto gap-2">
       <div className="col-span-9 bg-slate-100 mt-24 mb-10 rounded-md">
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 mb-5">
           {/* grid cols number 1  */}
           <div className="col-span-3 ml-8">
             <img className="w-16 h-16  mt-8 " src={image} alt="" />

@@ -1,10 +1,10 @@
 .border{
-    border-left: 2px solid rgb(39, 231, 126);
+    border-left: 2px solid rgba(7, 150, 83, 0.692);
     height: 3px;
     margin-right: 3px;
 }
 .color{
-    color:rgb(39, 231, 126);
+    color:rgba(7, 150, 83, 0.692);
    
 }
 .bgcolor{

@@ -2,7 +2,7 @@ import React from "react";
 
 const Summary = () => {
   return (
-    <div>
+    <div className="my-5 mr-5">
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
