@@ -24,6 +24,7 @@ const Home = () => {
               <span className="border"></span> E{" "}
             </h1>
           </div>
+          
           {/* grid cols number 2 */}
           <div className="col-span-3 mt-8">
             <h1 className="text-5xl">DAC</h1>
@@ -37,6 +38,7 @@ const Home = () => {
               <p>Class-W</p>
             </div>
           </div>
+
           {/* Grid cols number 3  */}
           <div className="col-span-3 flex justify-center  items-center">
             {button1 ? (
@@ -63,6 +65,7 @@ const Home = () => {
               </button>
             )}
           </div>
+
               {/* Grid cols number 4 */}
           <div className="col-span-3 mt-8 text-end mr-10 ">
             <h1 className="text-5xl ">JFK</h1>
