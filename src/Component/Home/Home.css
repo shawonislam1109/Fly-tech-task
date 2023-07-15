@@ -1,0 +1,12 @@
+.border{
+    border-left: 2px solid rgb(39, 231, 126);
+    height: 3px;
+    margin-right: 3px;
+}
+.color{
+    color:rgb(39, 231, 126);
+   
+}
+.bgcolor{
+    background-color : rgb(39, 231, 126);
+}

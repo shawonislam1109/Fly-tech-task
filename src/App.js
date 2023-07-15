@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import {RouterProvider} from "react-router-dom";
+import "./App.css";
+import {route} from "./Route/Route";
+import {createContext, useState} from "react";
+
+export const ButtonContext = createContext();
 
 function App() {
+  const [button1, setButton1] = useState(true);
+  // const [button2, setButton2] = useState(false);
+
+
+  const buttonValue = {setButton1, button1};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ButtonContext.Provider value={buttonValue}>
+        <RouterProvider router={route}>
+          
+        </RouterProvider>
+      </ButtonContext.Provider>
     </div>
   );
 }
