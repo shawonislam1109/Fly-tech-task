@@ -2,7 +2,7 @@ import React from "react";
 
 const Policy = () => {
   return (
-    <div className="grid grid-cols-2 gap-3 justify-between items-center my-10">
+    <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-3 justify-between items-center my-10">
       <div>
         <button className="bg-green-200 text-slate-500 rounded-md w-40 h-9">
           Cancelation

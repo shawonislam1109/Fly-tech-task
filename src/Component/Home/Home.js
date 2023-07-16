@@ -11,9 +11,9 @@ const Home = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-12 w-9/12 mx-auto gap-2">
-        <div className="col-span-9 bg-slate-100 mt-24 mb-10 rounded-md">
-          <div className="grid grid-cols-12 mb-5">
+      <div className="lg:grid grid-cols-12 w-9/12 mx-auto gap-2">
+        <div className="col-span-9 bg-slate-100 mt-24 mb-10 md:mb-20 rounded-md">
+          <div className="grid lg:grid-cols-12 md:mx-10  md:grid-cols-1  md:justify-center md:items-center mb-5">
             {/* grid cols number 1  */}
             <div className="col-span-3 ml-8">
               <img className="w-16 h-16  mt-8 " src={image} alt="" />
@@ -28,7 +28,7 @@ const Home = () => {
 
             {/* grid cols number 2 */}
             {button1 ? (
-              <div className="col-span-3 mt-8">
+              <div className="col-span-3 mt-8 md:ml-20">
                 <h1 className="text-5xl">DAC</h1>
                 <p className="text-slate-500 font-medium mt-3">
                   Hazrat Shajalal Intl Airport
@@ -103,7 +103,7 @@ const Home = () => {
                 </p>
               </div>
             ) : (
-              <div className="col-span-3 mt-8 text-end mr-8">
+              <div className="col-span-3 mt-8 md:mx-10 text-end mr-8">
                 <h1 className="text-5xl">DAC</h1>
                 <p className="text-slate-500 font-medium mt-3">
                   Hazrat Shajalal Intl Airport
@@ -124,7 +124,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="col-span-3 h-72 bg-slate-100 mt-24 rounded-md shadow-md">
+        <div className="col-span-3 h-72 pb-10 md:mb-10 bg-slate-100 mt-24 rounded-md shadow-md">
           <p className="flex justify-end  text-5xl mr-9 mt-7">
             <TbCurrencyTaka className="w-12 h-12 " />
             1800

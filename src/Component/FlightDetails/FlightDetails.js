@@ -4,7 +4,7 @@ import {Link, Outlet} from "react-router-dom";
 const FlightDetails = () => {
   return (
     <div>
-      <div className="grid grid-cols-4 justify-around ml-5 items-center my-10">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 justify-around ml-5 items-center my-10">
         <Link to="/">
           {" "}
           <button className=" w-18 h-8 px-2  rounded-sm focus:bg-green-900 focus:text-white">

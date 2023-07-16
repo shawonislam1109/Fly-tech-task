@@ -6,7 +6,7 @@ const Flight2 = () => {
     const {button1} = useContext(ButtonContext);
     return (
         <div>
-             <div className="grid grid-cols-12 mb-10">
+             <div className="grid lg:grid-cols-12 md:grid-cols-1 mb-10">
         {/* grid cols number 1  */}
         <div className="col-span-3 ml-1">
           <img className="w-16 h-16  mt-8 " src={image2} alt="" />
