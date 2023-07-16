@@ -12,8 +12,8 @@ const Home = () => {
   return (
     <div>
       <div className="lg:grid grid-cols-12 w-9/12 mx-auto gap-2">
-        <div className="col-span-9 bg-slate-100 mt-24 mb-10 md:mb-20 rounded-md">
-          <div className="grid lg:grid-cols-12 md:mx-10  md:grid-cols-1  md:justify-center md:items-center mb-5">
+        <div className="col-span-9 bg-slate-100 mt-24 mb-10  rounded-md">
+          <div className="grid lg:grid-cols-12  md:grid-cols-1  md:justify-center md:items-center mb-5">
             {/* grid cols number 1  */}
             <div className="col-span-3 ml-8">
               <img className="w-16 h-16  mt-8 " src={image} alt="" />
@@ -28,7 +28,7 @@ const Home = () => {
 
             {/* grid cols number 2 */}
             {button1 ? (
-              <div className="col-span-3 mt-8 md:ml-20">
+              <div className="col-span-3 mt-8 ml-2 ">
                 <h1 className="text-5xl">DAC</h1>
                 <p className="text-slate-500 font-medium mt-3">
                   Hazrat Shajalal Intl Airport
@@ -37,13 +37,13 @@ const Home = () => {
                 <p className="text-slate-500 font-medium mt-3">
                   SUN 4TH JUL 2022
                 </p>
-                <div className="flex justify-between color font-bold mt-12">
-                  <p>Refundable </p>
-                  <p>Class-W</p>
+                <div className="flex justify-around color mr-20 font-bold mt-12">
+                  <p className="" >Refundable </p>
+                  <p className="">Class-W</p>
                 </div>
               </div>
             ) : (
-              <div className="col-span-3 mt-8 ml-2 ">
+              <div className="col-span-3 mt-4 ml-2 ">
                 <h1 className="text-5xl ">JFK</h1>
                 <p className="text-slate-500 font-medium mt-3">
                   JF Kennedy Intl Airport
@@ -98,7 +98,7 @@ const Home = () => {
                 <p className="text-slate-500 font-medium mt-3">
                   MON 6TH JUL 2022
                 </p>
-                <p className="text-slate-500 font-medium mt-12">
+                <p className="text-slate-500 font-medium mt-12 mb-5">
                   Baggage : 45 KG
                 </p>
               </div>
@@ -112,9 +112,9 @@ const Home = () => {
                 <p className="text-slate-500 font-medium mt-3">
                   SUN 4TH JUL 2022
                 </p>
-                <div className="flex justify-around color font-bold mt-12">
+                <div className="flex justify-around mb-5 color font-bold mt-7">
                   <p>Refundable </p>
-                  <p>Class-W</p>
+                  <p className="">Class-W</p>
                 </div>
               </div>
             )}
