@@ -7,10 +7,9 @@ export const ButtonContext = createContext();
 
 function App() {
   const [button1, setButton1] = useState(true);
-  // const [button2, setButton2] = useState(false);
+  const [Hide , SetHide ] = useState(false) ; 
 
-
-  const buttonValue = {setButton1, button1};
+  const buttonValue = {setButton1, button1,Hide,SetHide};
   return (
     <div>
       <ButtonContext.Provider value={buttonValue}>
